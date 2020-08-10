@@ -1,0 +1,9 @@
+.user-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(244, 205, 96);
+  background-image: url("/images/crossword.png");
+  height: 400px;
+}
