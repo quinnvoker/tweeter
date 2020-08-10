@@ -1,10 +1,23 @@
-nav {
-  height: 120;
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
 }
 
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo {
   font-family: "Bungee", sans-serif;
+  font-size: 1.5em;
+}
+
+.tweet-arrow {
+  color: #f13b19;
 }
