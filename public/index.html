@@ -46,7 +46,17 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut magnam minima distinctio nostrum vero iure hic itaque, reiciendis facere quia, cum maiores perferendis molestias sunt fugiat. Quae ex perferendis enim dolores, asperiores esse vero ad minima tempore cum autem impedit atque reprehenderit? Placeat quas laudantium magni voluptas? Vitae expedita nobis repudiandae odit, laudantium fugiat saepe eius sit voluptates esse eaque repellat possimus rem voluptas officiis voluptatem quae. Provident, consectetur eveniet temporibus velit rerum dolor praesentium illo dolore architecto quidem nemo hic nisi magni quod adipisci harum eos, tempora quae aliquam suscipit neque itaque numquam repellendus deleniti! Quos accusamus iure minus praesentium nostrum nemo fugiat, laudantium inventore ullam suscipit soluta cumque! Delectus culpa quisquam similique. Pariatur vero maiores dolor fugit neque quos voluptates? Itaque soluta ipsa hic tempora facilis nihil rem, vero, quibusdam officiis tenetur totam laboriosam voluptas quaerat omnis vitae! Fugit aperiam, perferendis dolor magni explicabo veniam exercitationem. Eos qui eligendi culpa iure cupiditate aspernatur voluptatem dolor. Numquam ullam cupiditate nam? Maxime velit iusto impedit non natus. Molestias perferendis omnis sint amet magnam. Eum sed quae illum cumque vero pariatur, recusandae quasi, sit accusantium, aperiam quisquam. Eius odit in aliquam et, illum eum modi eos dolorum officia, ipsam ex.</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
