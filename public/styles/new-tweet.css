@@ -1,0 +1,30 @@
+.new-tweet {
+  align-self: center;
+  width: 80%;
+}
+
+.tweet-controls {
+  display: flex;
+  font-family: "Bungee", sans-serif;
+  margin: 0.25em 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submit-tweet {
+  border: none;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0.25em 0.3em;
+}
+
+#tweet-text {
+  height: 1.75em;
+  width: 100%;
+  padding: 0.1em;
+  border: none;
+  border-bottom: solid #545149 3px;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
