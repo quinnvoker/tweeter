@@ -18,8 +18,13 @@
   padding: 0.25em 0.3em;
 }
 
+.over-limit {
+  color: #f13b19;
+}
+
 #tweet-text {
-  height: 1.75em;
+  min-height: 1.75em;
+  max-height: 3em;
   width: 100%;
   padding: 0.1em;
   border: none;
