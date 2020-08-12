@@ -49,9 +49,16 @@ $(document).ready(() => {
   const $tweetForm = $('.new-tweet form');
   $tweetForm.on('submit', (event) => {
     event.preventDefault();
-    const queryString = $tweetForm.serialize();
-    $.ajax('/tweets', { method: 'POST', data: queryString });
-    $tweetForm.trigger('reset');
+    const $input = $tweetForm.find('#tweet-text');
+    if (!$input.val()) {
+      alert('Cannot submit a tweet without content!');
+    } else if ($input.val().length > 140) {
+      alert('Tweet cannot be longer than 140 characters!');
+    } else {
+      const queryString = $tweetForm.serialize();
+      $.ajax('/tweets', { method: 'POST', data: queryString });
+      $tweetForm.trigger('reset');
+    }
   });
 
   loadTweets();
