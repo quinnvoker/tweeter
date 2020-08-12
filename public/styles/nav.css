@@ -1,4 +1,7 @@
 .main-navigation {
+  position: fixed;
+  width: 100%;
+  top: 0px;
   display: flex;
   justify-content: space-between;
   height: 120px;
