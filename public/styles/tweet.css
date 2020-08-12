@@ -5,6 +5,10 @@
   padding: 8px;
 }
 
+.tweet:hover {
+  box-shadow: 5px 5px #c5cbe3;
+}
+
 .tweet header {
   display: flex;
   flex-direction: row;
@@ -27,8 +31,13 @@
 }
 
 .tweet .user-handle {
+  display: none;
   color: #c5cbe3;
   font-weight: bold;
+}
+
+.tweet:hover .user-handle {
+  display: inline;
 }
 
 .tweet .tweet-content {
