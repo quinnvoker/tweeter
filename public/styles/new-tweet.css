@@ -1,6 +1,7 @@
 .new-tweet {
   align-self: center;
-  width: 80%;
+  width: 100%;
+  margin: 1em 0;
 }
 
 .tweet-controls {
