@@ -40,7 +40,8 @@ const renderTweets = (tweets) => {
 const loadTweets = () => {
   $.ajax('/tweets', { method: 'GET' })
     .then((tweets) => {
-      renderTweets(tweets);
+      $('#timeline').empty();
+      renderTweets(tweets.reverse());
     });
 };
 
@@ -56,7 +57,8 @@ $(document).ready(() => {
       alert('Tweet cannot be longer than 140 characters!');
     } else {
       const queryString = $tweetForm.serialize();
-      $.ajax('/tweets', { method: 'POST', data: queryString });
+      $.ajax('/tweets', { method: 'POST', data: queryString })
+        .then(loadTweets);
       $tweetForm.trigger('reset');
     }
   });
