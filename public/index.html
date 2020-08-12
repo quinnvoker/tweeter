@@ -50,6 +50,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="error-field">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span class="error-text">Example error</span>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
         <form method="POST" action="/tweets">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="tweet-controls">

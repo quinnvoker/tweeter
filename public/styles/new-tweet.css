@@ -33,6 +33,17 @@
   color: #f13b19;
 }
 
+.new-tweet .error-field {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: larger;
+  color: #f13b19;
+  padding: 0.5em;
+  border: 3px solid;
+  margin: 0.5em;
+}
+
 #tweet-text {
   min-height: 1.75em;
   max-height: 3em;
