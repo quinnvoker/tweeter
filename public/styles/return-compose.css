@@ -1,0 +1,11 @@
+#return-compose {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: none;
+  color: #ffffff;
+  background-color: #f13b19;
+}
