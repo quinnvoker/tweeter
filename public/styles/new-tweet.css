@@ -2,6 +2,7 @@
   align-self: center;
   width: 100%;
   margin: 1em 0;
+  font-size: 0.8em;
 }
 
 .tweet-controls {
@@ -31,6 +32,7 @@
   border: none;
   border-bottom: solid #545149 3px;
   background-color: transparent;
+  font-weight: bold;
   resize: none;
   outline: none;
 }
