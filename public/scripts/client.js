@@ -52,16 +52,28 @@ const loadTweets = () => {
     });
 };
 
+const showTweetValidationError = (message) => {
+  const $error = $('.new-tweet .error-field');
+  $error.find('.error-text').text(message);
+  $error.addClass('validation-error');
+};
+
+const hideTweetValidationError = () => {
+  $('.new-tweet .error-field').removeClass('validation-error');
+};
+
 // setup ajax-based request for new tweet form
 const submitTweetHandler = function(event) {
   event.preventDefault();
   const $tweetForm = $(this);
   const $input = $tweetForm.find('#tweet-text');
+
   if (!$input.val()) {
-    alert('Cannot submit a tweet without content!');
+    showTweetValidationError('Cannot submit a tweet without content!');
   } else if ($input.val().length > 140) {
-    alert('Tweet cannot be longer than 140 characters!');
+    showTweetValidationError('Tweet cannot be longer than 140 characters!');
   } else {
+    hideTweetValidationError();
     const queryString = $tweetForm.serialize();
     $.ajax('/tweets', { method: 'POST', data: queryString })
       .then(loadTweets);
@@ -71,6 +83,7 @@ const submitTweetHandler = function(event) {
 
 $(() => {
   $('.new-tweet form').submit(submitTweetHandler);
+  $('.new-tweet .validation-error').hide();
 
   loadTweets();
 });
