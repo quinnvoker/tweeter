@@ -52,6 +52,7 @@ const loadTweets = () => {
     });
 };
 
+// setup ajax-based request for new tweet form
 const submitTweetHandler = function(event) {
   const $tweetForm = $(this);
   event.preventDefault();
@@ -68,9 +69,8 @@ const submitTweetHandler = function(event) {
   }
 };
 
-$(document).ready(() => {
-  // setup ajax-based request for new tweet form
-  $('.new-tweet form').on('submit', submitTweetHandler);
+$(() => {
+  $('.new-tweet form').submit(submitTweetHandler);
 
   loadTweets();
 });
