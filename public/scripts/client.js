@@ -29,13 +29,23 @@ const createTweetElement = (tweetData) => {
   return $(tweetMarkup);
 };
 
+// append an array of tweets to the timeline
 const renderTweets = (tweets) => {
   for (const tweet of tweets) {
     $('#timeline').append(createTweetElement(tweet));
   }
 };
 
+// fetch tweets array from /tweets and append them to the timeline
+const loadTweets = () => {
+  $.ajax('/tweets', { method: 'GET' })
+    .then((tweets) => {
+      renderTweets(tweets);
+    });
+};
+
 $(document).ready(() => {
+  // setup ajax-based request for new tweet form
   const $tweetForm = $('.new-tweet form');
   $tweetForm.on('submit', (event) => {
     event.preventDefault();
@@ -43,4 +53,6 @@ $(document).ready(() => {
     $.ajax('/tweets', { method: 'POST', data: queryString });
     $tweetForm.trigger('reset');
   });
+
+  loadTweets();
 });
