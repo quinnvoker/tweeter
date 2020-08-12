@@ -55,7 +55,7 @@ const loadTweets = () => {
 const showTweetValidationError = (message) => {
   const $error = $('.new-tweet .error-field');
   $error.find('.error-text').text(message);
-  
+
   if (!$error.hasClass('validation-error')) {
     $error.addClass('validation-error').hide();
     $error.slideDown();
@@ -89,7 +89,15 @@ const submitTweetHandler = function(event) {
 };
 
 $(() => {
-  $('.new-tweet form').submit(submitTweetHandler);
+  const $newTweet = $('.new-tweet');
+  $newTweet.hide();
+  
+  $('.main-navigation .open-compose').click(() => {
+    event.preventDefault();
+    $newTweet.slideToggle();
+  });
+
+  $newTweet.find('form').submit(submitTweetHandler);
 
   loadTweets();
 });
