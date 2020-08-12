@@ -5,7 +5,7 @@
   font-size: 0.8em;
 }
 
-.tweet-controls {
+.new-tweet .tweet-controls {
   display: flex;
   font-family: "Bungee", sans-serif;
   margin: 0.25em 0;
@@ -13,14 +13,14 @@
   align-items: center;
 }
 
-.submit-tweet {
+.new-tweet .submit-tweet {
   border: none;
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 0.25em 0.3em;
 }
 
-.over-limit {
+.new-tweet .over-limit {
   color: #f13b19;
 }
 
