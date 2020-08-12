@@ -35,6 +35,10 @@
 
 .new-tweet .error-field {
   display: none;
+}
+
+.new-tweet .error-field.validation-error {
+  display: flex;
   justify-content: space-between;
   font-weight: bold;
   font-size: larger;
@@ -42,10 +46,6 @@
   padding: 0.5em;
   border: 3px solid;
   margin: 0.5em;
-}
-
-.new-tweet .error-field.validation-error {
-  display: flex;
 }
 
 #tweet-text {

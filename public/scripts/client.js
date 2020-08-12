@@ -55,11 +55,18 @@ const loadTweets = () => {
 const showTweetValidationError = (message) => {
   const $error = $('.new-tweet .error-field');
   $error.find('.error-text').text(message);
-  $error.addClass('validation-error');
+  
+  if (!$error.hasClass('validation-error')) {
+    $error.addClass('validation-error').hide();
+    $error.slideDown();
+  }
 };
 
 const hideTweetValidationError = () => {
-  $('.new-tweet .error-field').removeClass('validation-error');
+  const $error = $('.new-tweet .error-field');
+  $error.slideUp(() => {
+    $error.removeClass('validation-error');
+  });
 };
 
 // setup ajax-based request for new tweet form
@@ -83,7 +90,6 @@ const submitTweetHandler = function(event) {
 
 $(() => {
   $('.new-tweet form').submit(submitTweetHandler);
-  $('.new-tweet .validation-error').hide();
 
   loadTweets();
 });
