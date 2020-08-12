@@ -90,13 +90,27 @@ const submitTweetHandler = function(event) {
 
 $(() => {
   const $newTweet = $('.new-tweet');
+  const $tweetText = $('#tweet-text');
   const $openCompose = $('.main-navigation .open-compose');
   const $returnCompose = $('#return-compose');
-
-  $('.main-navigation .open-compose').click(() => {
-    $newTweet.slideToggle();
-  });
+  
+  // enable AJAX tweet form submission
   $newTweet.find('form').submit(submitTweetHandler);
+  
+  // cause open compose button to toggle visibility of new tweet form
+  $('.main-navigation .open-compose').click(() => {
+    $newTweet.slideToggle(() => {
+      $tweetText.focus();
+    });
+  });
+
+  $returnCompose.click(() => {
+    $(window).scrollTop(405);
+    $newTweet.hide();
+    $newTweet.slideDown(() => {
+      $tweetText.focus();
+    });
+  });
 
   // show/hide compose buttons depending on scroll position
   $(window).scroll(() => {
