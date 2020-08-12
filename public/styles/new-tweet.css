@@ -1,4 +1,5 @@
 .new-tweet {
+  display: none;
   align-self: center;
   width: 100%;
   margin: 1em 0;

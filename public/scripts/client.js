@@ -90,10 +90,8 @@ const submitTweetHandler = function(event) {
 
 $(() => {
   const $newTweet = $('.new-tweet');
-  $newTweet.hide();
   
   $('.main-navigation .open-compose').click(() => {
-    event.preventDefault();
     $newTweet.slideToggle();
   });
 
