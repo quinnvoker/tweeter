@@ -27,7 +27,15 @@
 }
 
 .tweet .user-handle {
+  color: #c5cbe3;
   font-weight: bold;
+}
+
+.tweet .tweet-content {
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 1em;
+  border-bottom: solid #545149 3px;
 }
 
 .tweet footer {
@@ -36,4 +44,8 @@
   justify-content: space-between;
   font-size: small;
   padding: 12px;
+}
+
+.tweet footer .actions {
+  color: #4055a1;
 }
