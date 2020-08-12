@@ -20,6 +20,15 @@
   padding: 0.25em 0.3em;
 }
 
+.new-tweet .submit-tweet:hover {
+  box-shadow: 0 0 5px #4056A1;
+}
+
+.new-tweet .submit-tweet:active {
+	box-shadow: none;
+	background-color: #545149;
+}
+
 .new-tweet .over-limit {
   color: #f13b19;
 }
