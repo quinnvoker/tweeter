@@ -10,7 +10,13 @@
   padding: 1.5em;
 }
 
-.open-compose {
+.main-navigation .logo {
+  align-self: center;
+  font-family: "Bungee", sans-serif;
+  font-size: 1.5em;
+}
+
+.main-navigation .open-compose {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,12 +24,6 @@
   cursor: pointer;
 }
 
-.logo {
-  align-self: center;
-  font-family: "Bungee", sans-serif;
-  font-size: 1.5em;
-}
-
-.tweet-arrow {
+.main-navigation .open-compose .tweet-arrow {
   color: #f13b19;
 }
