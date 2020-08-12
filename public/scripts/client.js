@@ -39,7 +39,7 @@ const createTweetElement = (tweetData) => {
 // append an array of tweets to the timeline
 const renderTweets = (tweets) => {
   for (const tweet of tweets) {
-    $('#timeline').append(createTweetElement(tweet));
+    $('#timeline').prepend(createTweetElement(tweet));
   }
 };
 
@@ -48,14 +48,14 @@ const loadTweets = () => {
   $.getJSON('/tweets')
     .then((tweets) => {
       $('#timeline').empty();
-      renderTweets(tweets.reverse());
+      renderTweets(tweets);
     });
 };
 
 // setup ajax-based request for new tweet form
 const submitTweetHandler = function(event) {
-  const $tweetForm = $(this);
   event.preventDefault();
+  const $tweetForm = $(this);
   const $input = $tweetForm.find('#tweet-text');
   if (!$input.val()) {
     alert('Cannot submit a tweet without content!');
