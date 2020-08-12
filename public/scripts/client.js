@@ -90,12 +90,25 @@ const submitTweetHandler = function(event) {
 
 $(() => {
   const $newTweet = $('.new-tweet');
-  
+  const $openCompose = $('.main-navigation .open-compose');
+  const $returnCompose = $('#return-compose');
+
   $('.main-navigation .open-compose').click(() => {
     $newTweet.slideToggle();
   });
-
   $newTweet.find('form').submit(submitTweetHandler);
+
+  // show/hide compose buttons depending on scroll position
+  $(window).scroll(() => {
+    const height = $(window).scrollTop();
+    if (height > 420) {
+      $openCompose.hide();
+      $returnCompose.show();
+    } else {
+      $openCompose.show();
+      $returnCompose.hide();
+    }
+  });
 
   loadTweets();
 });
