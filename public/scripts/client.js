@@ -10,11 +10,11 @@ const createTweetElement = (tweetData) => {
     <header>
       <div class="user-display">
         <img class="user-avatar" src="${tweetData.user.avatars}"> 
-        <span class="user-nickname">${tweetData.user.name}</span>
+        <span class="user-nickname"></span>
       </div>
-      <span class="user-handle">${tweetData.user.handle}</span>
+      <span class="user-handle"></span>
     </header>
-    <span class="tweet-content">${tweetData.content.text}</span>
+    <span class="tweet-content"></span>
     <footer>
       <span class="post-time">${tweetData.created_at}</span>
       <div class="actions">
@@ -26,7 +26,14 @@ const createTweetElement = (tweetData) => {
   </article>
   `;
 
-  return $(tweetMarkup);
+  const $tweet = $(tweetMarkup);
+
+  // safely handle text insertion
+  $tweet.find('.user-nickname').text(tweetData.user.name);
+  $tweet.find('.user-handle').text(tweetData.user.handle);
+  $tweet.find('.tweet-content').text(tweetData.content.text);
+  
+  return $($tweet);
 };
 
 // append an array of tweets to the timeline
