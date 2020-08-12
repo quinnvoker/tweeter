@@ -1,0 +1,39 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border: solid #545149 3px;
+  padding: 8px;
+}
+
+.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.tweet .user-display {
+  display: flex;
+  align-items: center;
+}
+
+.tweet .user-avatar {
+  height: 1.75em;
+}
+
+.tweet .user-nickname {
+  margin: 0 0.5em;
+}
+
+.tweet .user-handle {
+  font-weight: bold;
+}
+
+.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: small;
+  padding: 12px;
+}
