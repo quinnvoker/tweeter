@@ -46,6 +46,7 @@
   font-size: 0.8em;
   padding: 1em;
   border-bottom: solid #545149 3px;
+  word-wrap: break-word;
 }
 
 .tweet footer {
