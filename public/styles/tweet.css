@@ -5,60 +5,51 @@
   padding: 8px;
   margin: 0 0 1em 0;
 }
-
-.tweet:hover {
-  box-shadow: 5px 5px #c5cbe3;
-}
-
-.user-info {
+.tweet .user-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
 }
-
-.user-display {
+.tweet .user-display {
   display: flex;
   align-items: center;
 }
-
-.user-avatar {
+.tweet .user-avatar {
   height: 1.75em;
 }
-
-.user-nickname {
+.tweet .user-nickname {
   margin: 0 0.5em;
 }
-
-.user-handle {
+.tweet .user-handle {
   display: none;
   color: #c5cbe3;
   font-weight: bold;
 }
-
-.tweet:hover .user-handle {
-  display: inline;
-}
-
-.tweet-content {
+.tweet .tweet-content {
   font-weight: bold;
   font-size: 0.8em;
   padding: 1em;
   border-bottom: solid #545149 3px;
   word-wrap: break-word;
 }
-
-.tweet-info {
+.tweet .tweet-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: small;
   padding: 12px;
 }
+.tweet .actions {
+  color: #4056A1;
+}
 
-.actions {
-  color: #4055a1;
+.tweet:hover {
+  box-shadow: 5px 5px #c5cbe3;
+}
+.tweet:hover .user-handle {
+  display: inline;
 }
 
 /*# sourceMappingURL=tweet.css.map */
