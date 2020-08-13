@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const createTweetElement = (tweetData) => {
   const tweetMarkup = `
   <article class="tweet">
@@ -16,7 +10,7 @@ const createTweetElement = (tweetData) => {
     </header>
     <span class="tweet-content"></span>
     <footer class="tweet-info">
-      <span class="post-time">${tweetData.created_at}</span>
+      <span class="post-time"></span>
       <div class="actions">
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
@@ -32,6 +26,7 @@ const createTweetElement = (tweetData) => {
   $tweet.find('.user-nickname').text(tweetData.user.name);
   $tweet.find('.user-handle').text(tweetData.user.handle);
   $tweet.find('.tweet-content').text(tweetData.content.text);
+  $tweet.find('.post-time').text(moment(tweetData.created_at).format('lll'));
   
   return $($tweet);
 };
