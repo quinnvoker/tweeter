@@ -45,7 +45,7 @@ const renderTweets = (tweets) => {
 
 // fetch tweets array from /tweets and append them to the timeline
 const loadTweets = () => {
-  $.getJSON('/tweets')
+  $.get('/tweets')
     .then((tweets) => {
       $('#timeline').empty();
       renderTweets(tweets);
@@ -72,6 +72,7 @@ const hideTweetValidationError = () => {
 // setup ajax-based request for new tweet form
 const submitTweetHandler = function(event) {
   event.preventDefault();
+
   const $tweetForm = $(this);
   const $input = $tweetForm.find('#tweet-text');
 
@@ -82,63 +83,17 @@ const submitTweetHandler = function(event) {
   } else {
     hideTweetValidationError();
     const queryString = $tweetForm.serialize();
-    $.ajax('/tweets', { method: 'POST', data: queryString })
-      .then(loadTweets);
-    $tweetForm.trigger('reset');
+
+    $.post('/tweets', queryString)
+      .then(() => {
+        $tweetForm.trigger('reset');
+        loadTweets();
+      });
   }
 };
 
 $(() => {
-  const $newTweet = $('.new-tweet');
-  const $tweetText = $('#tweet-text');
-  const $logo = $('.main-navigation .logo');
-  const $openCompose = $('.main-navigation .open-compose');
-  const $returnCompose = $('#return-compose');
-  
-  // updates the visibility of openCompose, returnCompose, and logo based on screen size and position
-  const updateButtonVisibility = function() {
-    const screenWidth = $(window).width();
-    const scrollHeight = $(window).scrollTop();
-  
-    if (screenWidth >= 1024 && scrollHeight > 60) {
-      $logo.show();
-      $openCompose.hide();
-      $returnCompose.show();
-    } else if (screenWidth < 1024 && scrollHeight > 420) {
-      $logo.hide();
-      $openCompose.hide();
-      $returnCompose.show();
-    } else {
-      $logo.show();
-      $openCompose.show();
-      $returnCompose.hide();
-    }
-  };
-
-  $(window).scroll(updateButtonVisibility);
-  $(window).resize(updateButtonVisibility);
-
-  // enable AJAX tweet form submission
-  $newTweet.find('form').submit(submitTweetHandler);
-
-  // cause open compose button to toggle visibility of new tweet form
-  $('.main-navigation .open-compose').click(() => {
-    $newTweet.slideToggle(() => {
-      $tweetText.focus();
-    });
-  });
-
-  $returnCompose.click(() => {
-    if ($(window).width() < 1024) {
-      $(window).scrollTop(410);
-    } else {
-      $(window).scrollTop(0);
-    }
-    $newTweet.hide();
-    $newTweet.slideDown(() => {
-      $tweetText.focus();
-    });
-  });
+  $('.new-tweet form').submit(submitTweetHandler);
 
   loadTweets();
 });
