@@ -49,10 +49,10 @@ body {
 
 @media (min-width: 1024px) {
   #presentation-area {
-    position: relative;
-    top: 120px;
     flex-direction: row;
     justify-content: space-evenly;
+    position: relative;
+    top: 120px;
     padding: 2em 2.5em;
   }
   .container {

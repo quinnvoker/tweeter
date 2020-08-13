@@ -105,7 +105,11 @@ $(() => {
   });
 
   $returnCompose.click(() => {
-    $(window).scrollTop(405);
+    if ($(window).width() < 1024) {
+      $(window).scrollTop(405);
+    } else {
+      $(window).scrollTop(0);
+    }
     $newTweet.hide();
     $newTweet.slideDown(() => {
       $tweetText.focus();
@@ -114,8 +118,13 @@ $(() => {
 
   // show/hide compose buttons depending on scroll position
   $(window).scroll(() => {
-    const height = $(window).scrollTop();
-    if (height > 420) {
+    const screenWidth = $(window).width();
+    const scrollHeight = $(window).scrollTop();
+
+    if (
+      (screenWidth < 1024 && scrollHeight > 420)
+      || (screenWidth >= 1024 && scrollHeight > 60)
+    ) {
       $openCompose.hide();
       $returnCompose.show();
     } else {
