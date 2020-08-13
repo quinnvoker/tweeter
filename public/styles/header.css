@@ -9,6 +9,8 @@
   height: 520px;
 }
 .user-profile .name-display {
+  font-weight: normal;
+  color: #ffffff;
   padding: 0 1em;
 }
 
