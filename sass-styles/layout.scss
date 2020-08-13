@@ -26,30 +26,29 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
  
- /* class to prevent selection, from https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting/4358620 */
- .noselect {
-   -webkit-touch-callout: none; /* iOS Safari */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Old versions of Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
-   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-  }
+#presentation-area {
+  display: flex;
+  flex-direction: column;
   
-  #presentation-area {
+  .container {
+    width: 90%;
+    margin: 1em 5%;
     display: flex;
     flex-direction: column;
-
-    .container {
-      width: 90%;
-      margin: 1em 5%;
-      display: flex;
-      flex-direction: column;
-    }
   }
-
+}
+   
+/* class to prevent selection, from https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting/4358620 */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+  
 @media (min-width: 1024px) {
   #presentation-area {
     flex-direction: row;
