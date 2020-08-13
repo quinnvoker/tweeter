@@ -7,7 +7,7 @@
 const createTweetElement = (tweetData) => {
   const tweetMarkup = `
   <article class="tweet">
-    <header>
+    <header class="user-info">
       <div class="user-display">
         <img class="user-avatar" src="${tweetData.user.avatars}"> 
         <span class="user-nickname"></span>
@@ -15,7 +15,7 @@ const createTweetElement = (tweetData) => {
       <span class="user-handle"></span>
     </header>
     <span class="tweet-content"></span>
-    <footer>
+    <footer class="tweet-info">
       <span class="post-time">${tweetData.created_at}</span>
       <div class="actions">
         <i class="fas fa-flag"></i>

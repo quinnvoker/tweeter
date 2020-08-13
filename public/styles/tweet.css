@@ -10,7 +10,7 @@
   box-shadow: 5px 5px #c5cbe3;
 }
 
-.tweet header {
+.user-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,20 +18,20 @@
   padding: 8px;
 }
 
-.tweet .user-display {
+.user-display {
   display: flex;
   align-items: center;
 }
 
-.tweet .user-avatar {
+.user-avatar {
   height: 1.75em;
 }
 
-.tweet .user-nickname {
+.user-nickname {
   margin: 0 0.5em;
 }
 
-.tweet .user-handle {
+.user-handle {
   display: none;
   color: #c5cbe3;
   font-weight: bold;
@@ -41,7 +41,7 @@
   display: inline;
 }
 
-.tweet .tweet-content {
+.tweet-content {
   font-weight: bold;
   font-size: 0.8em;
   padding: 1em;
@@ -49,7 +49,7 @@
   word-wrap: break-word;
 }
 
-.tweet footer {
+.tweet-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -57,6 +57,6 @@
   padding: 12px;
 }
 
-.tweet .actions {
+.actions {
   color: #4055a1;
 }
