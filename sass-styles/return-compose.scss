@@ -1,3 +1,5 @@
+@use 'base';
+
 #return-compose {
   display: none;
   position: fixed;
@@ -7,6 +9,6 @@
   height: 2em;
   border-radius: 50%;
   border: none;
-  color: #ffffff;
-  background-color: #f13b19;
+  color: base.$bright-color;
+  background-color: base.$accent-color;
 }
