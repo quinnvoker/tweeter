@@ -5,8 +5,17 @@
   justify-content: center;
   background-color: rgb(244, 205, 96);
   background-image: url("/images/crossword.png");
+  text-align: center;
   height: 520px;
 }
 
+.user-profile .name-display {
+  padding: 0 1em;
+}
+
 @media (min-width: 1024px) {
+  .user-profile{
+    margin-right: 2em;
+    flex-grow: 1;
+  }
 }
