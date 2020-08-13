@@ -1,13 +1,15 @@
+@use 'base';
+
 .user-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(244, 205, 96);
+  background-color: base.$secondary-color;
   background-image: url("/images/crossword.png");
   text-align: center;
   height: 520px;
-  
+
   .name-display {
     padding: 0 1em;
   }
