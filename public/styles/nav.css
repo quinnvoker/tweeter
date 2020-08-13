@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   height: 120px;
-  background-color: #4056A1;
+  background-color: transparent;
   color: #FFFFFF;
   padding: 1.5em;
   z-index: 1;
@@ -27,4 +27,10 @@
 
 .main-navigation .open-compose .tweet-arrow {
   color: #f13b19;
+}
+
+@media (min-width: 1024px) {
+  .main-navigation {
+    background-color: #4056A1;
+  }
 }
