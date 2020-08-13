@@ -41,3 +41,16 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
+
+#presentation-area {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  #presentation-area {
+    position: relative;
+    top: 120px;
+    flex-direction: row;
+  }
+}

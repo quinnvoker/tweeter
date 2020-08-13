@@ -8,6 +8,7 @@
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
+  z-index: 1;
 }
 
 .main-navigation .logo {
