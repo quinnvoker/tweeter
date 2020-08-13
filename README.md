@@ -1,8 +1,10 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+A simple, single-page Twitter clone built using jQuery, AJAX, HTML5, and CSS to hone my skills as a web developer on the front-end! All styles are written with SASS, and are compiled automatically at server launch. Written as part of Lighthouse Labs' web-developer bootcamp.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+![Desktop View](https://github.com/quinnvoker/tweeter/blob/master/docs/images/desktop.png) ![Mobile View](https://github.com/quinnvoker/tweeter/blob/master/docs/images/mobile.png)
+
+Built to be responsive! The website takes on one of two layouts, depending on the width of the display. Also tracks the current scroll position and uses it to toggle visibility between two buttons that open and focus a tweet-composing form.
 
 ## Getting Started
 
