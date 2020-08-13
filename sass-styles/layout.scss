@@ -1,3 +1,5 @@
+@use 'base';
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -16,36 +18,37 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: base.$bg-color;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: base.$primary-font;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.container {
-  width: 90%;
-  margin: 1em 5%;
-  display: flex;
-  flex-direction: column;
-}
+ 
+ /* class to prevent selection, from https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting/4358620 */
+ .noselect {
+   -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Old versions of Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
+  
+  #presentation-area {
+    display: flex;
+    flex-direction: column;
 
-/* class to prevent selection, from https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting/4358620 */
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
-#presentation-area {
-  display: flex;
-  flex-direction: column;
-}
+    .container {
+      width: 90%;
+      margin: 1em 5%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
 @media (min-width: 1024px) {
   #presentation-area {
@@ -54,10 +57,11 @@ body {
     position: relative;
     top: 120px;
     padding: 2em 2.5em;
-  }
-  .container {
-    min-width: 20em;
-    max-width: 40em;
-    margin: 0;
+    
+    .container {
+      min-width: 20em;
+      max-width: 40em;
+      margin: 0;
+    }
   }
 }
