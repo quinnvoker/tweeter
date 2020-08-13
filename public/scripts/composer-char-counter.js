@@ -1,6 +1,7 @@
-$(document).ready(() => {
+$(() => {
   const $inputBox = $('#tweet-text');
-  $inputBox.on('keyup', function() {
+
+  const updateCounter = () => {
     const charsLeft = 140 - $inputBox.val().length;
     const $counter = $inputBox.parent().find('.counter');
     $counter.text(charsLeft);
@@ -9,5 +10,10 @@ $(document).ready(() => {
     } else {
       $counter.removeClass("over-limit");
     }
-  });
+  };
+
+  $inputBox.on('keyup', updateCounter);
+
+  // ensure counter has accurate count on page load
+  updateCounter();
 });
