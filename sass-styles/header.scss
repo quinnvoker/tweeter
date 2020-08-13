@@ -3,20 +3,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f4cd60;
+  background-color: rgb(244, 205, 96);
   background-image: url("/images/crossword.png");
   text-align: center;
   height: 520px;
-}
-.user-profile .name-display {
-  padding: 0 1em;
+  
+  .name-display {
+    padding: 0 1em;
+  }
 }
 
+
 @media (min-width: 1024px) {
-  .user-profile {
+  .user-profile{
     margin-right: 2em;
     flex-grow: 1;
   }
 }
-
-/*# sourceMappingURL=header.css.map */

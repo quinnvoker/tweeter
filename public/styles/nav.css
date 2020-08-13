@@ -6,26 +6,23 @@
   justify-content: space-between;
   height: 120px;
   background-color: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 1.5em;
   z-index: 1;
 }
-
-.logo {
+.main-navigation .logo {
   align-self: center;
   font-family: "Bungee", sans-serif;
   font-size: 1.5em;
 }
-
-.open-compose {
+.main-navigation .open-compose {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 0.4em;
   cursor: pointer;
 }
-
-.tweet-arrow {
+.main-navigation .tweet-arrow {
   color: #f13b19;
 }
 
@@ -34,3 +31,5 @@
     background-color: #4056A1;
   }
 }
+
+/*# sourceMappingURL=nav.css.map */
