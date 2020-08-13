@@ -5,40 +5,33 @@
   margin: 1em 0;
   font-size: 0.8em;
 }
-
-.tweet-controls {
+.new-tweet .tweet-controls {
   display: flex;
   font-family: "Bungee", sans-serif;
   margin: 0.25em 0;
   justify-content: space-between;
   align-items: center;
 }
-
-.submit-tweet {
+.new-tweet .submit-tweet {
   border: none;
   background-color: #4056A1;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0.25em 0.3em;
 }
-
-.submit-tweet:hover {
+.new-tweet .submit-tweet:hover {
   box-shadow: 0 0 5px #4056A1;
 }
-
-.submit-tweet:active {
+.new-tweet .submit-tweet:active {
   box-shadow: none;
   background-color: #545149;
 }
-
-.over-limit {
+.new-tweet .over-limit {
   color: #f13b19;
 }
-
-.error-field {
+.new-tweet .error-field {
   display: none;
 }
-
-.error-field.validation-error {
+.new-tweet .error-field.validation-error {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
@@ -48,8 +41,7 @@
   border: 3px solid;
   margin: 0.5em;
 }
-
-#tweet-text {
+.new-tweet #tweet-text {
   min-height: 1.75em;
   max-height: 3em;
   width: 100%;
