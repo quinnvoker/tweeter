@@ -1,10 +1,5 @@
 @use 'base';
 
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
@@ -12,20 +7,12 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: base.$bg-color;
   font-size: 24px;
   font-family: base.$primary-font;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
  
 #presentation-area {
   display: flex;
@@ -41,12 +28,12 @@ body {
    
 /* class to prevent selection, from https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting/4358620 */
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
   
 @media (min-width: 1024px) {
