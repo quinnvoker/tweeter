@@ -42,8 +42,10 @@ const renderTweets = (tweets) => {
 const loadTweets = () => {
   $.get('/tweets')
     .then((tweets) => {
-      $('#timeline').empty();
-      renderTweets(tweets);
+      // use only tweets which have not yet been rendered to page
+      const newTweets = tweets.slice($('#timeline').children().length);
+
+      renderTweets(newTweets);
     });
 };
 
