@@ -3,7 +3,7 @@ const createTweetElement = (tweetData) => {
   <article class="tweet">
     <header class="user-info">
       <div class="user-display">
-        <img class="user-avatar" src="${tweetData.user.avatars}"> 
+        <img class="user-avatar" src=""> 
         <span class="user-nickname"></span>
       </div>
       <span class="user-handle"></span>
@@ -22,10 +22,15 @@ const createTweetElement = (tweetData) => {
 
   const $tweet = $(tweetMarkup);
 
+  // set avatar
+  $tweet.find('.user-avatar').attr('src', tweetData.user.avatars);
+
   // safely handle text insertion
   $tweet.find('.user-nickname').text(tweetData.user.name);
   $tweet.find('.user-handle').text(tweetData.user.handle);
   $tweet.find('.tweet-content').text(tweetData.content.text);
+
+  // include formatted creation time
   $tweet.find('.post-time').text(moment(tweetData.created_at).fromNow());
   
   return $($tweet);
