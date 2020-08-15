@@ -11,10 +11,10 @@ const createTweetElement = (tweetData) => {
     <span class="tweet-content"></span>
     <footer class="tweet-info">
       <span class="post-time"></span>
-      <div class="actions">
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
+      <div class="actions noselect">
+        <i class="tweet-action fas fa-flag"></i>
+        <i class="tweet-action fas fa-retweet"></i>
+        <i class="tweet-action fas fa-heart"></i>
       </div>
     </footer>
   </article>
