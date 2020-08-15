@@ -26,7 +26,7 @@ const createTweetElement = (tweetData) => {
   $tweet.find('.user-nickname').text(tweetData.user.name);
   $tweet.find('.user-handle').text(tweetData.user.handle);
   $tweet.find('.tweet-content').text(tweetData.content.text);
-  $tweet.find('.post-time').text(moment(tweetData.created_at).format('lll'));
+  $tweet.find('.post-time').text(moment(tweetData.created_at).fromNow());
   
   return $($tweet);
 };
